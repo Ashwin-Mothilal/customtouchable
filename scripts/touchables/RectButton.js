@@ -1,6 +1,8 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React  from "react";
+import { StyleSheet, View } from "react-native";
 import { RectButton as RNGHRectButton } from "react-native-gesture-handler";
+import Text from "../Text";
+import { BoldFont } from "../Fonts";
 
 const RectButton = () => {
   const onPress = () => {
@@ -10,7 +12,9 @@ const RectButton = () => {
   return (
     <RNGHRectButton onPress={onPress} style={RectButtonStyles.container}>
       <View accessible>
-        <Text style={{ color: "#333" }}>Tap me</Text>
+        <Text color="#333" fontFamily={BoldFont}>
+          Tap me
+        </Text>
       </View>
     </RNGHRectButton>
   );
